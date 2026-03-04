@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Install Progress</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="title">Install Progress</div>
+        <div class="sub" id="sub">Loading…</div>
+      </div>
+      <div class="right">
+        <div class="badge" id="badge">0 / 0</div>
+        <button id="btnClose" class="btn" disabled>Close</button>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="tabs" role="tablist" aria-label="Filter">
+        <button class="tab" id="tabAll" data-filter="all">All</button>
+        <button class="tab" id="tabBase" data-filter="base">Base</button>
+        <button class="tab" id="tabProd" data-filter="prod">Production</button>
+      </div>
+      <div class="meta" id="meta">—</div>
+    </div>
+
+    <div class="bar">
+      <div class="barFill" id="barFill" style="width:0%"></div>
+    </div>
+
+    <div class="hint">Auto-refreshes. Green = detected. Red = missing.</div>
+
+    <div class="sections" id="sections"></div>
+
+    <div class="done" id="done" style="display:none;">
+      <div class="big">DONE</div>
+      <div class="small">All required items detected.</div>
+    </div>
+
+    <!-- LOGS ARE ALWAYS BELOW THE APP LIST -->
+    <div class="logWrap" id="logWrap" style="display:none;">
+      <div class="logHeader">
+        <div>
+          <div class="logTitle" id="logTitle">Log (live)</div>
+          <div class="logSub" id="logSub">—</div>
+        </div>
+        <div class="logActions">
+          <button class="tab" id="btnCopyLog">Copy</button>
+          <button class="tab" id="btnOpenCmtrace">Open in CMTrace</button>
+        </div>
+      </div>
+      <pre class="logBox" id="logBox">Loading log…</pre>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

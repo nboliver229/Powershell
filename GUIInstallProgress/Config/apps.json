@@ -1,0 +1,149 @@
+{
+  "refreshSeconds": 3,
+  "modeDetection": {
+    "enabled": true,
+    "registryPath": "HKLM:\\SOFTWARE\\InstalledApps\\DeviceInformation",
+    "valueName": "DeploymentType"
+  },
+  "log": {
+    "enabled": true,
+    "path": "C:\\ProgramData\\Liquit\\Agent\\Logs\\Agent.log",
+    "tailLines": 400,
+    "maxBytes": 1048576,
+    "refreshSeconds": 1,
+    "cmtraceCandidates": [
+      "C:\\Windows\\CCM\\CMTrace.exe",
+      "C:\\Windows\\CCM\\CMTrace_x64.exe",
+      "C:\\_build\\CMTrace.exe"
+    ]
+  },
+  "groups": [
+    {
+      "id": "base",
+      "name": "Base Apps",
+      "targetCount": 13,
+      "checks": [
+        {
+          "name": "Office",
+          "type": "file",
+          "path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE"
+        },
+        {
+          "name": "Abacus Popup",
+          "type": "file",
+          "path": "C:\\Program Files (x86)\\Abacus\\Popup\\AgentService\\AbacusPCR.Popup.Service.exe"
+        },
+        {
+          "name": "GoTo Resolve Unattended",
+          "type": "file",
+          "path": "C:\\Program Files (x86)\\GoTo Resolve Unattended\\9042411539970521923\\GoToResolveUnattended.exe"
+        },
+        {
+          "name": "Google Chrome",
+          "type": "file",
+          "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+        },
+        {
+          "name": "Google Earth Pro",
+          "type": "file",
+          "path": "C:\\Program Files\\Google\\Google Earth Pro\\client\\googleearth.exe"
+        },
+        {
+          "name": "Zoom Outlook Plugin",
+          "type": "file",
+          "path": "C:\\Program Files (x86)\\Zoom\\Zoom Outlook Plugin\\plugin_Launcher.exe"
+        },
+        {
+          "name": "Zoom Workplace",
+          "type": "file",
+          "path": "C:\\Program Files\\Zoom\\bin\\Zoom.exe"
+        },
+        {
+          "name": "Freshservice Discovery Agent",
+          "type": "file",
+          "path": "C:\\Program Files (x86)\\Freshdesk\\Freshservice Discovery Agent\\bin\\FSAgentAutoUpdate.exe"
+        },
+        {
+          "name": "Bluebeam Revu",
+          "type": "file",
+          "path": "C:\\Program Files\\Bluebeam Software\\Bluebeam Revu\\21\\Revu\\Revu.exe"
+        },
+        {
+          "name": "Cisco Secure Client - AnyConnect VPN Suite",
+          "type": "file",
+          "path": "C:\\Program Files (x86)\\Cisco\\Cisco Secure Client\\UI\\csc_ui.exe"
+        },
+        {
+          "name": "DLR Group Newsreader Font",
+          "type": "file",
+          "path": "C:\\Windows\\Fonts\\Newsreader-Bold.ttf"
+        },
+        {
+          "name": "Microsoft Visual C++ 2015-2022 Redistributable",
+          "type": "regValue",
+          "path": "HKLM:\\Software\\WOW6432Node\\Microsoft\\VisualStudio\\14.0\\VC\\Runtimes\\X64",
+          "valueName": "Version"
+        },
+        {
+          "name": "Newforma Project Center",
+          "type": "file",
+          "path": "C:\\Program Files\\Newforma\\Newforma PDF\\gui.exe"
+        }
+      ]
+    },
+    {
+      "id": "prod",
+      "name": "Production Apps",
+      "targetCount": 8,
+      "checks": [
+        {
+          "name": "Revit 2024",
+          "type": "file",
+          "path": "C:\\Program Files\\Autodesk\\Revit 2024\\Revit.exe"
+        },
+        {
+          "name": "Revit 2026",
+          "type": "file",
+          "path": "C:\\Program Files\\Autodesk\\Revit 2026\\Revit.exe"
+        },
+        {
+          "name": "AutoCAD",
+          "type": "fileOr",
+          "paths": [
+            "C:\\Program Files\\Autodesk\\AutoCAD 2024\\acad.exe",
+            "C:\\Program Files\\Autodesk\\AutoCAD 2025\\acad.exe"
+          ]
+        },
+        {
+          "name": "Desktop Connector",
+          "type": "file",
+          "path": "C:\\Program Files\\Autodesk\\Desktop Connector"
+        },
+        {
+          "name": "Rhino 8",
+          "type": "file",
+          "path": "C:\\Program Files\\Rhino 8\\System\\Rhino.exe"
+        },
+        {
+          "name": "Rhino Inside",
+          "type": "fileOr",
+          "paths": [
+            "C:\\ProgramData\\Autodesk\\Revit\\Addins\\2022\\RhinoInside.Revit\\R8\\RhinoInside.Revit.Loader.dll",
+            "C:\\ProgramData\\Autodesk\\Revit\\Addins\\2024\\RhinoInside.Revit\\RhinoInside.Revit.Loader.dll"
+          ]
+        },
+        {
+          "name": "CTC Nexus",
+          "type": "file",
+          "path": "C:\\ProgramData\\CTC Software\\CTC Nexus Suite\\CMS\\CMS.exe"
+        },
+        {
+          "name": "Clarity Client",
+          "type": "regValue",
+          "path": "HKLM:\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{0F9D644E-90D9-4205-BC5B-F564450BFB82}",
+          "valueName": "UninstallString"
+        }
+      ]
+    }
+  ]
+}

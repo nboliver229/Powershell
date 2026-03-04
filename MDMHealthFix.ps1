@@ -1,10 +1,13 @@
-
+##MDMHealthFix##
+##Created by Nick Oliver##
+##Please edit the UNC path below in Param to ensure proper hybridjoin.xml file is copied if on domain and not available locally##
+##proper scheduled task copy is in GIT files##
 [CmdletBinding()]
 param(
   [switch]$Remediate,
 
   [string]$TaskXmlPath = "C:\Temp\HybridJoin.xml",
-  [string]$XmlSourceUNC = "\\dlrgroup.com\data\Apps\Microsoft\Intune\HybridJoin.xml",
+  [string]$XmlSourceUNC = "<UNC PATH HERE>,
   [string]$CoMgmtLogPath = "C:\Windows\CCM\Logs\CoManagementHandler.log",
   [string]$OutLog = "C:\Temp\MDMHealthFix.log",
   [switch]$RestartCcmexecOnFix = $true
