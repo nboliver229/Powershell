@@ -4,7 +4,7 @@ param(
   [switch]$Remediate,
 
   [string]$TaskXmlPath = "C:\Temp\HybridJoin.xml",
-  [string]$XmlSourceUNC = "\\dlrgroup.com\data\Apps\Microsoft\Intune\HybridJoin.xml",
+  [string]$XmlSourceUNC = "<UNC PATH HERE>,
   [string]$CoMgmtLogPath = "C:\Windows\CCM\Logs\CoManagementHandler.log",
   [string]$OutLog = "C:\Temp\MDMHealthFix.log",
   [switch]$RestartCcmexecOnFix = $true
